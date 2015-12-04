@@ -1,0 +1,27 @@
+{
+  "name": "smart-deep-sort-node",
+  "version": "1.0.0",
+  "description": "Deep sort including array values",
+  "main": "index.js",
+  "dependencies": {
+    "json-stable-stringify": "^1.0.0"
+  },
+  "devDependencies": {
+    "jasmine-node": "^1.14.5"
+  },
+  "scripts": {
+    "test": "jasmine-node spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://ttrail@bitbucket.org/ttrail/smart-deep-sort-node.git"
+  },
+  "keywords": [
+    "nodejs",
+    "jasmine-node",
+    "sort"
+  ],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/ttrail/smart-deep-sort-node#readme"
+}
