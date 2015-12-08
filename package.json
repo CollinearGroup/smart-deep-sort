@@ -4,10 +4,11 @@
   "description": "Deep sort including array values",
   "main": "index.js",
   "dependencies": {
-    "json-stable-stringify": "^1.0.0"
+    "deep-sort-object": "^0.1.1"
   },
   "devDependencies": {
-    "jasmine-node": "^1.14.5"
+    "jasmine-node": "^1.14.5",
+    "stringify-object": "^2.3.1"
   },
   "scripts": {
     "test": "jasmine-node spec"

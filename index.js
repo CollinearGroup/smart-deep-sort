@@ -1,15 +1,15 @@
 "use strict"
 
-var stringify = require('json-stable-stringify')
+var sortKeys = require('deep-sort-object')
 
 /**
   * Sorts by keys using json-stable-stringify, maintaining undefined,
   * including by first key's values of first level nested arrays.
   */
-function sortobjectByFirstKey(originalSrc) {
+function sortObject(originalSrc) {
   var out = {}
 
-  var src = JSON.parse(stringify(originalSrc, {replacer: retainUndefined}))
+  var src = sortKeys(originalSrc)
   Object.keys(src).forEach(function(key) {
     if (Array.isArray(src[key])) {
       out[key] = src[key].sort(firstKeyCompare)
@@ -17,7 +17,6 @@ function sortobjectByFirstKey(originalSrc) {
       out[key] = src[key]
     }
   })
-
   return out
 }
  
@@ -51,4 +50,4 @@ function retainUndefined(key, value) {
   return value ? value : null
 }
 
-module.exports = sortobjectByFirstKey
+module.exports = sortObject

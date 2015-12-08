@@ -11,14 +11,14 @@ describe('First level keys sort', function() {
 	  expect(result['d']).toBe('dd')
   })
 
-  it('sort maintains undefined fields', function() {
+  it('maintains undefined fields', function() {
     var result = sortBy(simpleObj)
-	  expect(result['c']).toBe(null)
+	  expect(result['c']).not.toBeDefined()
   })
 })
 
 describe('Sort by key then inner arrays\' first field values', function() {
-  it('sort handles strings and undefined fields as null', function() {
+  it('sort handles strings and undefined fields', function() {
     var result = sortBy(data.musicStoresWithStringArray)
 	  expect(result).toEqual(data.sortedMusicStoresWithStringArray)
   })

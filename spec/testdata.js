@@ -9,7 +9,7 @@ module.exports = {
 	  name: 'Ukulele Town', city: 'Auburn', phone: '253-333-0987'
 	}, {
 	  name: 'Guitar Center', city: 'Tacoma', phone: '253-999-0000'
-	}, {
+	} ,{
 	  name: 'Don\'s Green River Music', city: 'Auburn',  phone: '253-333-1234'
 	}, {
 	  name: 'Arnie\'s Music Center', city: undefined, phone: '253-999-0000'
@@ -20,7 +20,7 @@ module.exports = {
 
   sortedMusicStoresWithStringArray : {
 	area: 'King County',
-	rating: null,
+	rating: undefined,
 	state: 'WA',
     stores: [ {
 	  city: 'Auburn', name: 'Ukulele Town', phone: '253-333-0987'
@@ -31,9 +31,9 @@ module.exports = {
 	  },{
 	  city: 'Tukwila', name: 'Guitar Center', phone: '206-555-1234'
 	  }, {
-	  city: null, name: 'Hidden Notes', phone: null
+	  city: undefined, name: 'Hidden Notes', phone: undefined
 	  }, {
-	  city: null, name: 'Arnie\'s Music Center', phone: '253-999-0000'
+	  city: undefined, name: 'Arnie\'s Music Center', phone: '253-999-0000'
 	  }]
   },
 
@@ -69,7 +69,7 @@ module.exports = {
     area: 'King County',
     stores: [{
       name: 'TBD',
-      location: {zip: undefined, city: undefined, state: 'WA'},
+      location: {zip: undefined, city: null, state: 'WA'},
 	    phone: undefined
     }, {
       name: 'Guitar Center',
@@ -97,11 +97,11 @@ module.exports = {
 	   name: 'Guitar Center',
 	   phone: '206-555-1234'
 	 },{
-	   location: {city: null, state: 'WA', zip: null},
+	   location: {city: null, state: 'WA', zip: undefined},
 	   name: 'TBD',
-	   phone: null
+	   phone: undefined
 	 },{
-	   location: null,
+	   location: undefined,
 	   name: 'Don\'s Green River Music',
 	   phone: '253-333-0987'
 	 }]
