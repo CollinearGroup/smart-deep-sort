@@ -7,8 +7,8 @@ describe('First level keys sort', function() {
   it('sorts when all fields are defined', function() {
     var result = sortBy(simpleObj)
     expect(Object.keys(result).length).toBe(4)
-    expect(JSON.stringify(result)).toEqual({'a': 'aa', 'b': 'bb', 'c': undefined, 'd': 'dd'})
-	  expect(JSON.stringify(result['d'])).toEqual('dd')
+    expect(JSON.stringify(result)).toEqual(JSON.stringify({'a': 'aa', 'b': 'bb', 'c': undefined, 'd': 'dd'}))
+    expect(JSON.stringify(result['d'])).toEqual(JSON.stringify('dd'))
   })
 
   it('maintains undefined fields', function() {
