@@ -1,4 +1,4 @@
-var sortBy = require('../index')
+var sortBy = require('../lib/index')
 
 describe('First level keys sort', function() {
   var simpleObj = {

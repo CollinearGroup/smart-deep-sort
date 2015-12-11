@@ -2,7 +2,7 @@
   "name": "smart-deep-sort-node",
   "version": "1.0.0",
   "description": "Deep sort including array values",
-  "main": "index.js",
+  "main": "lib/index.js",
   "dependencies": {
     "deep-sort-object": "^0.1.1"
   },
@@ -20,9 +20,13 @@
   "keywords": [
     "nodejs",
     "jasmine-node",
-    "sort"
+    "sort",
+    "deep",
+    "smart",
+    "object",
+    "array"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "Dan Villa <dvilla@collineargroup>",
+  "license": "MIT",
   "homepage": "https://bitbucket.org/ttrail/smart-deep-sort-node#readme"
 }
