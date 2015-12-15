@@ -36,12 +36,12 @@ module.exports = {
     state: 'WA',
     stores: [{
       city: 'Auburn',
-      name: 'Ukulele Town',
-      phone: '253-333-0987'
-    }, {
-      city: 'Auburn',
       name: 'Don\'s Green River Music',
       phone: '253-333-1234'
+    }, {
+      city: 'Auburn',
+      name: 'Ukulele Town',
+      phone: '253-333-0987'
     }, {
       city: 'Tacoma',
       name: 'Guitar Center',
@@ -52,12 +52,12 @@ module.exports = {
       phone: '206-555-1234'
     }, {
       city: undefined,
-      name: 'Hidden Notes',
-      phone: undefined
-    }, {
-      city: undefined,
       name: 'Arnie\'s Music Center',
       phone: '253-999-0000'
+    }, {
+      city: undefined,
+      name: 'Hidden Notes',
+      phone: undefined
     }]
   },
 
@@ -110,7 +110,7 @@ module.exports = {
     }, {
       name: 'Guitar Center',
       location: {
-        zip: '98188',
+        zip: '98405',
         city: 'Tukwila',
         state: 'WA'
       },
@@ -126,7 +126,7 @@ module.exports = {
         city: 'Tacoma',
         state: 'WA'
       },
-      phone: '253-999-0000'
+      phone: '206-555-1234'
     }]
   },
 
@@ -139,12 +139,12 @@ module.exports = {
         zip: '98405'
       },
       name: 'Guitar Center',
-      phone: '253-999-0000'
+      phone: '206-555-1234'
     }, {
       location: {
         city: 'Tukwila',
         state: 'WA',
-        zip: '98188'
+        zip: '98405'
       },
       name: 'Guitar Center',
       phone: '206-555-1234'
@@ -233,10 +233,10 @@ module.exports = {
   sortedStableCheck: {
     numbers: [{
       itemNum: '123',
-      seatcolor: 'white'
+      seatcolor: 'red'
     }, {
       itemNum: '123',
-      seatcolor: 'red'
+      seatcolor: 'white'
     }, {
       itemNum: '456',
       seatcolor: 'blue'
