@@ -51,8 +51,6 @@ describe('Sort by key then inner arrays\' first field values', function() {
 
   it('sort handles nested objects', function() {
     var result = sortBy(data.musicStoresWithObjectArray)
-    console.log(JSON.stringify(result, null, '  '))
-    console.log(JSON.stringify(data.sortedMusicStoresWithObjectArray, null, '  '))
     expect(JSON.stringify(result)).toBe(JSON.stringify(data.sortedMusicStoresWithObjectArray))
   })
 
@@ -67,7 +65,6 @@ describe('Sort by key then inner arrays\' first field values', function() {
   })
 })
 
-//TODO
 describe('SmartDeepSort async', function() {
   var data
   beforeEach(function() {
@@ -88,7 +85,7 @@ describe('SmartDeepSort async', function() {
 
 
 // TODO
-xdescribe('SmartDeepSort variant objects', function() {
+describe('SmartDeepSort variant objects', function() {
   var data
 
   beforeEach(function() {
@@ -100,8 +97,8 @@ xdescribe('SmartDeepSort variant objects', function() {
   })
 
   it('should sort example object', function() {
-    sortBy(data.mixedTypesCheck)
-    expect(JSON.stringify(data.mixedTypesCheck)).toBe(JSON.stringify(data.sortedMixedTypesCheck))
+    var result = sortBy(data.mixedTypesCheck)
+    expect(JSON.stringify(result)).toBe(JSON.stringify(data.sortedMixedTypesCheck))
   });
 
 });

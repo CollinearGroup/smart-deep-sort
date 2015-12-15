@@ -1,14 +1,16 @@
 {
   "name": "smart-deep-sort-node",
   "version": "1.0.0",
-  "description": "Deep sort including array values",
+  "description": "Deep sort an object, no matter what the contents are.",
   "main": "lib/index.js",
   "dependencies": {
-    "deep-sort-object": "^0.1.1"
+    "array-sort": "^0.1.1",
+    "deep-sort-object": "^0.1.1",
+    "sorty": "^1.2.0",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
-    "jasmine-node": "^1.14.5",
-    "stringify-object": "^2.3.1"
+    "jasmine-node": "^1.14.5"
   },
   "scripts": {
     "test": "jasmine-node spec"

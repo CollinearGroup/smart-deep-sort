@@ -7,8 +7,8 @@ module.exports = {
       phone: '206-555-1234'
     }, {
       name: 'Hidden Notes',
-      city: undefined,
-      phone: undefined
+      // city: undefined,
+      // phone: undefined
     }, {
       name: 'Ukulele Town',
       city: 'Auburn',
@@ -23,16 +23,16 @@ module.exports = {
       phone: '253-333-1234'
     }, {
       name: 'Arnie\'s Music Center',
-      city: undefined,
+      // city: undefined,
       phone: '253-999-0000'
     }],
-    rating: undefined,
+    // rating: undefined,
     state: 'WA'
   },
 
   sortedMusicStoresWithStringArray: {
     area: 'King County',
-    rating: undefined,
+    // rating: undefined,
     state: 'WA',
     stores: [{
       city: 'Auburn',
@@ -51,13 +51,13 @@ module.exports = {
       name: 'Guitar Center',
       phone: '206-555-1234'
     }, {
-      city: undefined,
+      // city: undefined,
       name: 'Arnie\'s Music Center',
       phone: '253-999-0000'
     }, {
-      city: undefined,
+      // city: undefined,
       name: 'Hidden Notes',
-      phone: undefined
+      // phone: undefined
     }]
   },
 
@@ -102,11 +102,11 @@ module.exports = {
     stores: [{
       name: 'TBD',
       location: {
-        zip: undefined,
+        // zip: undefined,
         city: null,
         state: 'WA'
       },
-      phone: undefined
+      // phone: undefined
     }, {
       name: 'Guitar Center',
       location: {
@@ -117,7 +117,7 @@ module.exports = {
       phone: '206-555-1234'
     }, {
       name: 'Don\'s Green River Music',
-      location: undefined,
+      // location: undefined,
       phone: '253-333-0987'
     }, {
       name: 'Guitar Center',
@@ -152,12 +152,12 @@ module.exports = {
       location: {
         city: null,
         state: 'WA',
-        zip: undefined
+        // zip: undefined
       },
       name: 'TBD',
-      phone: undefined
+      // phone: undefined
     }, {
-      location: undefined,
+      // location: undefined,
       name: 'Don\'s Green River Music',
       phone: '253-333-0987'
     }]
@@ -246,21 +246,21 @@ module.exports = {
   mixedTypesCheck: {
     primativeInt: 2,
     primativeString: '1',
-    polyglotArray: [{
+    mixedArray: [{
         nestedObjName: 'Nestle',
         abilities: ['rock', 'and', 'roll'],
       },
-      [4, 2, 1, 'two', 'twenty-thousand'],
+      [4, 1, 2, 'two', 'twenty-thousand'],
       'basicString',
     ]
   },
 
   sortedMixedTypesCheck: {
-    polyglotArray: [
-      'basicString', [1, 2, 4, 'twenty-thousand', 'two'], {
+    mixedArray: [
+      [1, 2, 4, 'twenty-thousand', 'two'], {
         abilities: ['and', 'rock', 'roll'],
         nestedObjName: 'Nestle',
-      },
+      }, 'basicString',
     ],
     primativeInt: 2,
     primativeString: '1',
