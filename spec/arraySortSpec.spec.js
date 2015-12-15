@@ -51,6 +51,8 @@ describe('Sort by key then inner arrays\' first field values', function() {
 
   it('sort handles nested objects', function() {
     var result = sortBy(data.musicStoresWithObjectArray)
+    console.log(JSON.stringify(result, null, '  '))
+    console.log(JSON.stringify(data.sortedMusicStoresWithObjectArray, null, '  '))
     expect(JSON.stringify(result)).toBe(JSON.stringify(data.sortedMusicStoresWithObjectArray))
   })
 
@@ -66,7 +68,7 @@ describe('Sort by key then inner arrays\' first field values', function() {
 })
 
 //TODO
-xdescribe('SmartDeepSort async', function() {
+describe('SmartDeepSort async', function() {
   var data
   beforeEach(function() {
     data = require('./testdata')
@@ -84,38 +86,9 @@ xdescribe('SmartDeepSort async', function() {
 
 });
 
-//TODO
-xdescribe('SmartDeepSort options', function() {
-  var data
-
-  beforeEach(function() {
-    data = require('./testdata')
-  })
-
-  afterEach(function() {
-    delete data
-  })
-
-  it('should treat as mutable by default', function() {
-    // By default we should change the passed in object.
-    sortBy(data.musicStoresWithStringArray)
-    expect(data.musicStoresWithStringArray).toBe(data.sortedMusicStoresWithStringArray)
-  });
-
-  it('should provide mutable option', function() {
-    // By default we should change the passed in object.
-    var opts = {
-      mutable: false,
-    }
-    var result = sortBy(data.musicStoresWithStringArray, opts)
-    expect(data.musicStoresWithStringArray).not.toBe(data.sortedMusicStoresWithStringArray)
-    expect(result).toBe(data.sortedMusicStoresWithStringArray)
-  });
-
-});
 
 // TODO
-xdescribe('SmartDeepSort polyglot objects', function() {
+xdescribe('SmartDeepSort variant objects', function() {
   var data
 
   beforeEach(function() {
@@ -128,7 +101,7 @@ xdescribe('SmartDeepSort polyglot objects', function() {
 
   it('should sort example object', function() {
     sortBy(data.mixedTypesCheck)
-    expect(data.mixedTypesCheck).toBe(data.sortedMixedTypesCheck)
+    expect(JSON.stringify(data.mixedTypesCheck)).toBe(JSON.stringify(data.sortedMixedTypesCheck))
   });
 
 });
