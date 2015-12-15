@@ -19,9 +19,9 @@ var myPerson = {
   surNames: ['Boss', 'Luthier'],
 }
 
-sort(myPerson)
+var result = sort(myPerson)
 
-console.log(myPerson)
+console.log(result)
 ```
 
 ### The Rules ###
