@@ -1,6 +1,6 @@
 {
   "name": "smart-deep-sort",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Deep sort an object, no matter what the contents are.",
   "main": "lib/index.js",
   "dependencies": {
