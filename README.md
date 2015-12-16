@@ -52,7 +52,7 @@ console.log(JSON.stringify(ret) === JSON.stringify(sortedMixedTypes))
 
 ### Limitations ###
 
-* Cannot handle objects with undefined keys, _they will be dropped from the resulting object_.
+* Cannot handle objects with undefined keys, _they will probably be dropped from the resulting object_.
 * Not optimized, I don't recommend using this as part of stream processing.
 * Does not handle Date types. The default string representation of the date will be used in comparisons.
 
