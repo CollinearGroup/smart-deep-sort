@@ -6,8 +6,7 @@
 
 Deep sort an object, no matter what the contents are.
 
-Contribute on [GitHub](https://github.com/kingnebby/smart-deep-sort.git)
-Find on [npm](https://www.npmjs.com/package/smart-deep-sort)
+Contribute on [GitHub](https://github.com/kingnebby/smart-deep-sort.git) and on [npm](https://www.npmjs.com/package/smart-deep-sort).
 
 ### Usage ###
 
@@ -44,11 +43,11 @@ console.log(JSON.stringify(ret) === JSON.stringify(sortedMixedTypes))
 ### The Rules ###
 
 * Objects fields are deep sorted by key using [deep-sort-object](https://www.npmjs.com/package/deep-sort-object)
-** keys at all levels are sorted using default string Unicode code sort order
+  * keys at all levels are sorted using default string Unicode code sort order
 
 * Arrays elements are sorted by type, ordered on the constructor name. *A*rrays come first then *B*ooleans, etc.
-** Nested objects are sorted by using [sorty](https://www.npmjs.com/package/sorty) to order them by keys and values.
-** All other nested object types are sorted by their contents using [array-sort](https://www.npmjs.com/package/array-sort)
+  * Nested objects are sorted by using [sorty](https://www.npmjs.com/package/sorty) to order them by keys and values.
+  * All other nested object types are sorted by their contents using [array-sort](https://www.npmjs.com/package/array-sort)
 
 ### Limitations ###
 
