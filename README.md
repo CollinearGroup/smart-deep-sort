@@ -1,50 +1,65 @@
 # README #
 
-### Deep Smart Sort ###
+## Deep Smart Sort ##
 
-`npm install deep-smart-sort`
+`npm install smart-deep-sort`
 
-* Contains the node module for [deep smart(er) sorting](https://collineargroup.atlassian.net/wiki/display/COL/Smart+Deep+Sort+Node+Module)
-* Version 1.0.0
-* Learning [Node.js](https://nodejs.org/en/) and [jasmine-node](https://www.npmjs.com/package/jasmine-node).
+Deep sort an object, no matter what the contents are.
+
+Contribute on [GitHub](https://github.com/kingnebby/smart-deep-sort.git)
+Find on [npm](https://www.npmjs.com/package/smart-deep-sort)
 
 ### Usage ###
 
 ```js
-var sort = require('deep-smart-sort')
+var sort = require('smart-deep-sort')
 
-var myPerson = {
-  name: 'Fender',
-  isParent: true,
-  surNames: ['Boss', 'Luthier'],
+var mixedTypes = {
+  primativeInt: 2,
+  primativeString: '1',
+  mixedArray: [{
+      nestedObjName: 'Nestle',
+      abilities: ['rock', 'and', 'roll'],
+    },
+    [4, 1, 2, 'two', 'twenty-thousand'],
+    'basicString',
+  ]
 }
 
-sort(myPerson)
+var sortedMixedTypes = {
+  mixedArray: [
+    [1, 2, 4, 'twenty-thousand', 'two'], {
+      abilities: ['and', 'rock', 'roll'],
+      nestedObjName: 'Nestle',
+    }, 'basicString',
+  ],
+  primativeInt: 2,
+  primativeString: '1',
+}
 
-console.log(myPerson)
+var ret = sort(mixedTypes)
+console.log(JSON.stringify(ret) === JSON.stringify(sortedMixedTypes))
 ```
 
 ### The Rules ###
 
-* Object is deep sorted by key
+* Objects fields are deep sorted by key using [deep-sort-object](https://www.npmjs.com/package/deep-sort-object)
 ** keys at all levels are sorted using default string Unicode code sort order
-* If a first level key's value is an array of objects, the array will be sorted based on the value of the object's first field.
-** if the object's value is also another object, then the sort is based on the value of that object's first field.
-*** Assumes string or number sorting.
-*** Does not support Date objects.  Assumes dates use ISO 8601 string format (yyyy-mm-dd).
-** any undefined or null key will sort to bottom, maintaining their original order, per ECMA 262 22.1.3.24.1 Note 1.
-* The sort is not necessarily stable.  Equal key values will maintain original order only.
 
-### How do I build the module? ###
+* Arrays elements are sorted by type, ordered on the constructor name. *A*rrays come first then *B*ooleans, etc.
+** Nested objects are sorted by using [sorty](https://www.npmjs.com/package/sorty) to order them by keys and values.
+** All other nested object types are sorted by their contents using [array-sort](https://www.npmjs.com/package/array-sort)
+
+### Limitations ###
+
+* Cannot handle objects with undefined keys, _they will be dropped from the resulting object_.
+* Not optimized, I don't recommend using this as part of stream processing.
+* Does not handle Date types. The default string representation of the date will be used in comparisons.
+
+## How do I build the module? ##
 
 To run unit tests, run `npm test`.
 
-### Contribution guidelines ###
-
-* Writing jasmine-node tests
-* Code review
-
 ### Who do I talk to? ###
 
-* ttrail@collineargroup.com
 * dvilla@collineargroup.com

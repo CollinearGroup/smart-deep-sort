@@ -1,4 +1,5 @@
 var sortBy = require('../lib/index')
+var util = require('util')
 
 describe('First level keys sort', function() {
   var simpleObj = {
@@ -74,17 +75,19 @@ describe('SmartDeepSort async', function() {
     delete data
   })
   it('should provide async api', function(done) {
-    // TODO: should type check second option to determine if callback function or opts.
-    sortBy(data.musicStoresWithStringArray, function(result) {
+    var opts = {}
+    var after = false
+    sortBy(data.musicStoresWithStringArray, opts, function(result) {
       expect(JSON.stringify(result)).toBe(JSON.stringify(data.sortedMusicStoresWithStringArray))
+      after = true
       done()
     })
+    expect(after).toBe(false)
   });
 
 });
 
 
-// TODO
 describe('SmartDeepSort variant objects', function() {
   var data
 
@@ -101,4 +104,27 @@ describe('SmartDeepSort variant objects', function() {
     expect(JSON.stringify(result)).toBe(JSON.stringify(data.sortedMixedTypesCheck))
   });
 
+  it('should sort by type when mixed', function() {
+    var result1 = sortBy(data.mixedTypesWithStringFirst)
+    var result2 = sortBy(data.mixedTypesWithArrayFirst)
+    expect(JSON.stringify(result1)).toBe(JSON.stringify(result2))
+  });
+
+});
+
+describe('SmartDeepSort arrays', function() {
+  var data
+
+  beforeEach(function() {
+    data = require('./testdata')
+  })
+
+  afterEach(function() {
+    delete data
+  })
+
+  it('should sort example object', function() {
+    var result = sortBy(data.arrayOfThings)
+    expect(JSON.stringify(result)).toBe(JSON.stringify(data.sortedArrayOfThings))
+  });
 });

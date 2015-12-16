@@ -1,5 +1,5 @@
 {
-  "name": "smart-deep-sort-node",
+  "name": "smart-deep-sort",
   "version": "1.0.0",
   "description": "Deep sort an object, no matter what the contents are.",
   "main": "lib/index.js",
@@ -17,15 +17,25 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://ttrail@bitbucket.org/ttrail/smart-deep-sort-node.git"
+    "url": "https://github.com/kingnebby/smart-deep-sort.git"
   },
   "keywords": [
-    "nodejs",
-    "jasmine-node",
     "sort",
+    "sorted",
+    "sorting",
+    "multiple",
+    "property",
+    "nested",
+    "order",
+    "ordered",
+    "ordering",
     "deep",
     "smart",
+    "list",
+    "objects",
     "object",
+    "collection",
+    "set",
     "array"
   ],
   "author": "Dan Villa <dvilla@collineargroup>",

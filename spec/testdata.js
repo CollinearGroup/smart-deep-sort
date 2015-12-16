@@ -219,27 +219,21 @@ module.exports = {
 
   stableCheck: {
     numbers: [{
-      itemNum: '123',
-      seatcolor: 'white'
+      seatcolor: 'blue',
     }, {
-      itemNum: '456',
-      seatcolor: 'blue'
+      username: 'xena',
     }, {
       itemNum: '123',
-      seatcolor: 'red'
     }]
   },
 
   sortedStableCheck: {
     numbers: [{
       itemNum: '123',
-      seatcolor: 'red'
     }, {
-      itemNum: '123',
-      seatcolor: 'white'
-    }, {
-      itemNum: '456',
       seatcolor: 'blue'
+    }, {
+      username: 'xena',
     }]
   },
 
@@ -265,4 +259,42 @@ module.exports = {
     primativeInt: 2,
     primativeString: '1',
   },
+
+  mixedTypesWithArrayFirst: {
+    mixedArray: ['1', [1],
+      [1, 3],
+      [1, 2], {
+        1: 1
+      }, {
+        pun: 'pun'
+      },
+      10, 100, 1111, '2000',
+    ]
+  },
+  mixedTypesWithStringFirst: {
+    mixedArray: [
+      [1],
+      [1, 3],
+      [1, 2], {
+        pun: 'pun'
+      },
+      10, 1111, 100, '2000', '1', {
+        1: 1
+      },
+    ]
+  },
+  sortedMixedTypesWithStringFirst: {
+    mixedArray: [
+      [1],
+      [1, 2],
+      [1, 3], 10, 100, 1111, {
+        1: 1
+      }, {
+        pun: 'pun'
+      }, '1', '2000',
+    ]
+  },
+
+  arrayOfThings: [1, '123', 987, '987'],
+  sortedArrayOfThings: [1, 987, '123', '987'],
 }
