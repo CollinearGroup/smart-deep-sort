@@ -11,10 +11,13 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^6.0.2"
+    "mocha": "^6.0.2",
+    "nyc": "^13.3.0",
+    "standard-version": "^5.0.2"
   },
   "scripts": {
-    "test": "mocha spec --recursive"
+    "release": "standard-version",
+    "test": "nyc mocha spec --recursive"
   },
   "repository": {
     "type": "git",
@@ -40,6 +43,5 @@
     "array"
   ],
   "author": "Dan Villa <dvilla@collineargroup>",
-  "license": "MIT",
-  "homepage": "https://github.com/CollinearGroup/smart-deep-sort#readme"
+  "license": "MIT"
 }
