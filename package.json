@@ -4,16 +4,17 @@
   "description": "Deep sort an object, no matter what the contents are.",
   "main": "lib/index.js",
   "dependencies": {
-    "array-sort": "^0.1.1",
-    "deep-sort-object": "^0.1.1",
+    "array-sort": "^1.0.0",
+    "deep-sort-object": "^1.0.2",
     "sorty": "^1.2.0",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
-    "jasmine-node": "^1.14.5"
+    "chai": "^4.2.0",
+    "mocha": "^6.0.2"
   },
   "scripts": {
-    "test": "jasmine-node spec"
+    "test": "mocha spec --recursive"
   },
   "repository": {
     "type": "git",
