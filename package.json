@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kingnebby/smart-deep-sort.git"
+    "url": "https://github.com/CollinearGroup/smart-deep-sort.git"
   },
   "keywords": [
     "sort",
@@ -41,5 +41,5 @@
   ],
   "author": "Dan Villa <dvilla@collineargroup>",
   "license": "MIT",
-  "homepage": "https://bitbucket.org/ttrail/smart-deep-sort-node#readme"
+  "homepage": "https://github.com/CollinearGroup/smart-deep-sort#readme"
 }
