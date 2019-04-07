@@ -2,6 +2,9 @@
 
 > Deep sort an object, no matter what the contents are.
 
+[![CircleCI](https://circleci.com/gh/CollinearGroup/smart-deep-sort.svg?style=svg)](https://circleci.com/gh/CollinearGroup/smart-deep-sort)
+[![Coverage Status](https://coveralls.io/repos/github/CollinearGroup/smart-deep-sort/badge.svg?branch=master)](https://coveralls.io/github/CollinearGroup/smart-deep-sort?branch=master)
+
 ## Install
 
 ```

@@ -11,13 +11,15 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
+    "coveralls": "^3.0.3",
     "mocha": "^6.0.2",
     "nyc": "^13.3.0",
     "standard-version": "^5.0.2"
   },
   "scripts": {
-    "release": "standard-version",
-    "test": "nyc mocha spec --recursive"
+    "test": "nyc mocha spec --recursive",
+    "report-coverage": "nyc report --reporter=text-lcov | coveralls",
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",
