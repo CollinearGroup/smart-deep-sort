@@ -5,11 +5,11 @@
 version: 2
 jobs:
   build:
+    filters: # required since `publish` has tag filters AND requires `build`
+      tags:
+        only: /.*/
     docker:
       - image: circleci/node:10
-
-    working_directory: ~/repo
-
     steps:
       - checkout
 
@@ -29,3 +29,25 @@ jobs:
 
       - run: npm test
       - run: npm run report-coverage
+
+  publish:
+    docker:
+      - image: circleci/node:10
+    steps:
+      - checkout
+      # Is this really right?
+      # - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+      - run: npm publish
+
+workflows:
+  version: 2
+  tagged-build:
+    jobs:
+      - publish:
+          requires:
+            - build
+          filters:
+            tags:
+              only: /^v.*/
+            branches:
+              ignore: /.*/
