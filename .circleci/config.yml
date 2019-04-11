@@ -35,14 +35,17 @@ jobs:
       - image: circleci/node:10
     steps:
       - checkout
-      # Is this really right?
-      # - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+      - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
       - run: npm publish
 
 workflows:
   version: 2
   tagged-build:
     jobs:
+      - build:
+          filters: # required since `publish` has tag filters AND requires `build`
+            tags:
+              only: /.*/
       - publish:
           requires:
             - build
